@@ -78,7 +78,7 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY', 'SomeRandomString'),
+	'key' => env('APP_KEY', 'CQ3SEKDpiOvT34EYN7uA6I5YNRslKOOL'),
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -137,12 +137,19 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 
 		/*
+		 * Package Service Providers...
+		 */
+		'App\Providers\AnnotationsServiceProvider',
+
+		/*
 		 * Application Service Providers...
 		 */
+		'App\Providers\AnnotationsServiceProvider',
 		'App\Providers\AppServiceProvider',
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
+		'App\Providers\ParsersServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
 	],

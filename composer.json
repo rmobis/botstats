@@ -1,15 +1,17 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "rmobis/botstats",
+	"description": "Tibia bots' forums crawler and statistics generator.",
+	"keywords": ["tibia", "bot", "statistics", "crawler", "windbot", "ibot", "xenobot", "redbot"],
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "~5.0"
-	},
-	"require-dev": {
-		"phpunit/phpunit": "~4.0",
-		"phpspec/phpspec": "~2.1"
+		"laravel/framework": "~5.0",
+		"adamgoose/laravel-annotations": "~5.0",
+		"symfony/dom-crawler": "~2.6.3",
+		"symfony/css-selector": "~2.6.3",
+		"guzzlehttp/guzzle": "~5.1.0",
+		"nesbot/carbon": "~1.13.0",
+		"doctrine/dbal": "~2.5.1"
 	},
 	"autoload": {
 		"classmap": [
