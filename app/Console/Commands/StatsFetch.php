@@ -127,7 +127,7 @@ class StatsFetch extends Command {
 	private function displayStats(Bot $bot, Stats $stats)
 	{
 		$this->info(sprintf('Successfully fetched data for %s', $bot->name));
-		$this->info(sprintf("Online:  %' 6d | Members: %' 6d | Guests: %' 6d", $stats->total_online, $stats->online_members, $stats->online_guests));
+		$this->info(sprintf("Online:  %' 6d | Members: %' 6d | Guests: %' 6d", $stats->total_online, $stats->members_online, $stats->guests_online));
 		$this->info(sprintf("Total:   %' 6d | Active:  %' 6d", $stats->total_members, $stats->active_members));
 		$this->info(sprintf("Threads: %' 6d | Posts:   %' 6d", $stats->total_threads, $stats->total_posts));
 

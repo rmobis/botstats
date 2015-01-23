@@ -52,8 +52,8 @@ class vBulletinParser implements Parser {
 		// Assign to stats object
 		list(
 			$stats->total_online,
-			$stats->online_members,
-			$stats->online_guests
+			$stats->members_online,
+			$stats->guests_online
 		) = $data;
 	}
 
