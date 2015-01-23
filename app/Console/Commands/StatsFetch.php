@@ -114,7 +114,6 @@ class StatsFetch extends Command {
 
 		// Optionally save to database
 		if (!$this->option('pretend')) {
-			$this->error('Fuck you!');
 			$bot->stats()->save($stats);
 		}
 	}
