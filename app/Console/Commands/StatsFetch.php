@@ -88,7 +88,7 @@ class StatsFetch extends Command {
 	protected function getOptions()
 	{
 		return [
-			['pretend', 'p', InputOption::VALUE_OPTIONAL, 'Do not insert fetched data in database', false],
+			['pretend', 'p', InputOption::VALUE_NONE, 'Do not insert fetched data in database'],
 		];
 	}
 
@@ -114,6 +114,7 @@ class StatsFetch extends Command {
 
 		// Optionally save to database
 		if (!$this->option('pretend')) {
+			$this->error('Fuck you!');
 			$bot->stats()->save($stats);
 		}
 	}
