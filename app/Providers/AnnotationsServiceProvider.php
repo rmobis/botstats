@@ -16,13 +16,15 @@ class AnnotationsServiceProvider extends ServiceProvider {
      *
      * @var array
      */
-    protected $scanRoutes = [];
+    protected $scanRoutes = [
+        'App\Http\Controllers\ApiController',
+    ];
 
     /**
      * Determines if we will auto-scan in the local environment.
      *
      * @var bool
      */
-    protected $scanWhenLocal = false;
+    protected $scanWhenLocal = true;
 
 }

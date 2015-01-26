@@ -140,6 +140,7 @@ return [
 		 * Package Service Providers...
 		 */
 		'App\Providers\AnnotationsServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -196,6 +197,9 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+		'Str'       => 'Illuminate\Support\Str',
+		'Debugbar'  => 'Barryvdh\Debugbar\Facade',
 
 	],
 

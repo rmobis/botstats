@@ -4,6 +4,8 @@
 /bootstrap/compiled.php
 .env
 
+### Laravel Debugbar ###
+/storage/debugbar
 
 ### Node ###
 # Logs
@@ -49,3 +51,9 @@ vendor/
 # Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # composer.lock
+
+### Assets ###
+public/build
+public/css
+public/js
+resources/sass/vendor
