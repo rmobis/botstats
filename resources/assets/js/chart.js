@@ -5,6 +5,11 @@
 	var $chartDiv     = $('#chart'),
 		$statsAnchors = $('.js-stats a');
 
+	/**
+	 * Creates a new chart instance for the given stat.
+	 *
+	 * @param  string
+	 */
 	function createChart(stat) {
 		// Free any previously drawn chart
 		if (window.statChart !== undefined) {
@@ -20,6 +25,7 @@
 			});
 		});
 
+		// Pass all the desired options
 		$chartDiv.highcharts({
 			chart: {
 				type: 'spline',
@@ -66,6 +72,11 @@
 		loadData(stat);
 	}
 
+	/**
+	 * Asynchronously loads the data for a given stat into the chart.
+	 *
+	 * @param  string
+	 */
 	function loadData(stat) {
 		window.statChart.showLoading();
 
@@ -73,6 +84,7 @@
 			url: '/api/' + stat,
 			dataType: 'json'
 		}).done(function (data) {
+			// Update data
 			window.statChart.xAxis[0].series.forEach(function (value, index) {
 				value.setData(data.day[index].data, false);
 			});
@@ -81,6 +93,7 @@
 				text: data.meta.name
 			});
 
+			// Update active anchor
 			$statsAnchors.parent()
 			             .removeClass('active');
 
@@ -88,9 +101,11 @@
 			             .parent()
 			             .addClass('active');
 
+			// Update URL
 			history.replaceState({
 				stat: data.meta.stat
 			}, data.meta.stat, '/' + data.meta.stat);
+
 
 			window.statChart.hideLoading();
 		});
