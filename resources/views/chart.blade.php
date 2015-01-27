@@ -55,8 +55,10 @@
 		</div>
 
 		<script>
-			window.botNames     = {!! json_encode(App\Bot::lists('name')) !!};
-			window.startingStat = {!! json_encode($stat) !!};
+			window.statsData = {
+				botNames     : {!! json_encode(App\Bot::lists('name')) !!},
+				startingStat : {!! json_encode($stat) !!}
+			};
 		</script>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

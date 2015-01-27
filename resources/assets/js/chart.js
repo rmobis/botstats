@@ -1,4 +1,4 @@
-/* global botNames, startingStat, startingType */
+/* global statsData */
 (function() {
 	'use strict';
 	
@@ -12,13 +12,13 @@
 	 */
 	function createChart(stat) {
 		// Free any previously drawn chart
-		if (window.statChart !== undefined) {
-			window.statChart.destroy();
+		if (statsData.chart !== undefined) {
+			statsData.chart.destroy();
 		}
 
 		// Prep series
 		var preppedSeries = [];
-		window.botNames.forEach(function (name) {
+		statsData.botNames.forEach(function (name) {
 			preppedSeries.push({
 				name: name,
 				data: []
@@ -67,7 +67,7 @@
 			series: preppedSeries
 		});
 
-		window.statChart = $chartDiv.highcharts();
+		statsData.chart = $chartDiv.highcharts();
 
 		loadData(stat);
 	}
@@ -78,18 +78,18 @@
 	 * @param  string
 	 */
 	function loadData(stat) {
-		window.statChart.showLoading();
+		statsData.chart.showLoading();
 
 		$.ajax({
 			url: '/api/' + stat,
 			dataType: 'json'
 		}).done(function (data) {
 			// Update data
-			window.statChart.xAxis[0].series.forEach(function (value, index) {
+			statsData.chart.xAxis[0].series.forEach(function (value, index) {
 				value.setData(data.day[index].data, false);
 			});
 
-			window.statChart.xAxis[0].setTitle({
+			statsData.chart.xAxis[0].setTitle({
 				text: data.meta.name
 			});
 
@@ -107,7 +107,7 @@
 			}, data.meta.stat, '/' + data.meta.stat);
 
 
-			window.statChart.hideLoading();
+			statsData.chart.hideLoading();
 		});
 	}
 
@@ -115,5 +115,5 @@
 		loadData($(this).data('stat'));
 	});
 
-	createChart(window.startingStat);
+	createChart(statsData.startingStat);
 })();
