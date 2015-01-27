@@ -57,11 +57,7 @@
 
 			xAxis: {
 				type: 'datetime',
-				minRange: 24 * 60 * 60 * 1000,
-
-				title: {
-					text: 'Time'
-				}
+				minRange: 24 * 60 * 60 * 1000
 			},
 
 			series: preppedSeries
