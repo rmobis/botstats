@@ -73,7 +73,7 @@
 			url: '/api/' + stat,
 			dataType: 'json'
 		}).done(function (data) {
-			window.statChart.xAxis[0].series.forEach(function (value, index, series) {
+			window.statChart.xAxis[0].series.forEach(function (value, index) {
 				value.setData(data.day[index].data, false);
 			});
 
