@@ -88,6 +88,10 @@
 			             .parent()
 			             .addClass('active');
 
+			history.replaceState({
+				stat: data.meta.stat
+			}, data.meta.stat, '/' + data.meta.stat);
+
 			window.statChart.hideLoading();
 		});
 	}
