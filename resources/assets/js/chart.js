@@ -69,6 +69,11 @@
 
 		statsData.chart = $chartDiv.highcharts();
 
+		// Plot all events
+		Object.keys(statsData.events).forEach(function (key) {
+			statsData.events[key].data.forEach(addPlotLine, statsData.events[key]);
+		});
+
 		loadData(stat);
 	}
 
@@ -108,6 +113,30 @@
 
 
 			statsData.chart.hideLoading();
+		});
+	}
+
+	/**
+	 * Adds a plot line. We use those to display events that may have been
+	 * significant for the statistics displayed.
+	 *
+	 * @param string
+	 * @param string
+	 * @param moment
+	 */
+	function addPlotLine(e) {
+		statsData.chart.xAxis[0].addPlotLine({
+			width: 1,
+			/*jshint validthis:true */
+			color: this.styling.color,
+			dashStyle: 'dash',
+			value: e.date.valueOf(),
+			label: {
+				text: e.title,
+				style: {
+					color: '#FFFFFF'
+				}
+			}
 		});
 	}
 

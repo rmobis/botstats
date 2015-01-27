@@ -37,6 +37,8 @@ elixir(function(mixx) {
 			'../resources/assets/js/highcharts.dark-unica.override.js',
 			'js/vendor/moment-with-locales.js',
 			'js/vendor/moment-timezone-with-data.js',
+			'../resources/assets/js/events/updates.js',
+			'../resources/assets/js/events/others.js',
 			'../resources/assets/js/chart.js'
 		], null, 'public/js/botstats.js')
 		.copy(
