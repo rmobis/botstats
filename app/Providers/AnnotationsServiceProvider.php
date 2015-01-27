@@ -18,6 +18,7 @@ class AnnotationsServiceProvider extends ServiceProvider {
      */
     protected $scanRoutes = [
         'App\Http\Controllers\ApiController',
+        'App\Http\Controllers\ChartController',
     ];
 
     /**
