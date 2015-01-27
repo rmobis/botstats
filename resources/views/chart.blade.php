@@ -56,7 +56,7 @@
 
 		<script>
 			window.statsData = {
-				botNames     : {!! json_encode(App\Bot::lists('name')) !!},
+				botNames     : {!! json_encode(App\Bot::orderBy('id')->lists('name')) !!},
 				startingStat : {!! json_encode($stat) !!}
 			};
 		</script>
