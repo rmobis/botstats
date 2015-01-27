@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 
 use Carbon\Carbon;
 
-use Illuminate\Http\Request;
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Routing\ResponseFactory as Response;
 
