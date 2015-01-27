@@ -22,6 +22,21 @@ class Stats extends Model {
 	const MILISECONDS_OFFSET = 719528 * 24 * 60 * 60 * 1000;
 
 	/**
+	 * List of all current stat types.
+	 * 
+	 * @var array
+	 */
+	public static $stats = [
+		'active_members',
+		'total_members',
+		'members_online',
+		'guests_online',
+		'total_online',
+		'total_threads',
+		'total_posts',
+	];
+
+	/**
 	 * Indicates if the model should be timestamped.
 	 *
 	 * @var bool
@@ -45,6 +60,10 @@ class Stats extends Model {
 	 */
 	public static function getApiData(Bot $bot, $statName)
 	{
+		if (!in_array($statName, self::$stats)) {
+			throw new \InvalidArgumentException("Invalid stat name.");
+		}
+
 		// TODO: Find a cleaner way to do this
 		$rawSelect = 
 			'`' . $statName . '` AS stat, ' .
