@@ -11,6 +11,10 @@
 
 		data: [
 			{
+				title: '10.74 Update',
+				date: '2015-01-27'
+			},
+			{
 				title: '10.73 Update',
 				date: '2015-01-20'
 			},
