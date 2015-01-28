@@ -38,7 +38,7 @@
 						<li class="dropdown">
 							<a href="javascript:void" class="dropdown-toggle" data-toggle="dropdown">Chart Stat <span class="caret"></span></a>
 							<ul class="dropdown-menu js-stats" role="menu">
-								@foreach(App\Stats::$stats as $statName)
+								@foreach(BotStats\Stats::$stats as $statName)
 									<li>
 										<a href="javascript:void" data-stat="{{ str_replace('_', '-', $statName) }}">{{ Str::title(str_replace('_', ' ', $statName)) }}</a>
 									</li>
@@ -56,7 +56,7 @@
 
 		<script>
 			window.statsData = {
-				botNames     : {!! json_encode(App\Bot::orderBy('id')->lists('name')) !!},
+				botNames     : {!! json_encode(BotStats\Bot::orderBy('id')->lists('name')) !!},
 				startingStat : {!! json_encode($stat) !!}
 			};
 		</script>

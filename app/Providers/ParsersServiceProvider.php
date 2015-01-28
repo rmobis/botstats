@@ -1,6 +1,6 @@
-<?php namespace App\Providers;
+<?php namespace BotStats\Providers;
 
-use App\Parsers\vBulletinParser;
+use BotStats\Parsers\vBulletinParser;
 
 use Illuminate\Support\ServiceProvider;
 

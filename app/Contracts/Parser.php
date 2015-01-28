@@ -1,15 +1,15 @@
-<?php namespace App\Contracts;
+<?php namespace BotStats\Contracts;
 
-use App\Stats;
+use BotStats\Stats;
 
 interface Parser {
 
 	/**
-	 * Parses the input and returns an App\Stats object with the parsed data.
+	 * Parses the input and returns an BotStats\Stats object with the parsed data.
 	 * 
 	 * @param  string
 	 * 
-	 * @return App\Stats
+	 * @return BotStats\Stats
 	 */
 	public function parse($input);
 	

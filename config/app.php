@@ -139,19 +139,19 @@ return [
 		/*
 		 * Package Service Providers...
 		 */
-		'App\Providers\AnnotationsServiceProvider',
+		'BotStats\Providers\AnnotationsServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
 
 		/*
 		 * Application Service Providers...
 		 */
-		'App\Providers\AnnotationsServiceProvider',
-		'App\Providers\AppServiceProvider',
-		'App\Providers\BusServiceProvider',
-		'App\Providers\ConfigServiceProvider',
-		'App\Providers\EventServiceProvider',
-		'App\Providers\ParsersServiceProvider',
-		'App\Providers\RouteServiceProvider',
+		'BotStats\Providers\AnnotationsServiceProvider',
+		'BotStats\Providers\AppServiceProvider',
+		'BotStats\Providers\BusServiceProvider',
+		'BotStats\Providers\ConfigServiceProvider',
+		'BotStats\Providers\EventServiceProvider',
+		'BotStats\Providers\ParsersServiceProvider',
+		'BotStats\Providers\RouteServiceProvider',
 
 	],
 

@@ -1,6 +1,6 @@
-<?php namespace App;
+<?php namespace BotStats;
 
-use App\Bot;
+use BotStats\Bot;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -45,16 +45,16 @@ class Stats extends Model {
 
 	/**
 	 * Sets up a one-to-many relationship between Bot and Stats.
-	 * @return App\Bot
+	 * @return BotStats\Bot
 	 */
 	public function bot() {
-		return $this->belongsTo('App\Post');
+		return $this->belongsTo('BotStats\Post');
 	}
 
 	/**
 	 * Gets stats data for a given bot in the format Highcharts expects it.
 	 * 
-	 * @param  App\Bot
+	 * @param  BotStats\Bot
 	 * @param  string
 	 * @return array
 	 */

@@ -1,6 +1,6 @@
-<?php namespace App\Http\Controllers;
+<?php namespace BotStats\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use BotStats\Http\Controllers\Controller;
 
 class ChartController extends Controller {
 

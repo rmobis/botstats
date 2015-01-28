@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace BotStats\Providers;
 
 use Adamgoose\AnnotationsServiceProvider as ServiceProvider;
 
@@ -17,8 +17,8 @@ class AnnotationsServiceProvider extends ServiceProvider {
      * @var array
      */
     protected $scanRoutes = [
-        'App\Http\Controllers\ApiController',
-        'App\Http\Controllers\ChartController',
+        'BotStats\Http\Controllers\ApiController',
+        'BotStats\Http\Controllers\ChartController',
     ];
 
     /**

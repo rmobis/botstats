@@ -1,7 +1,7 @@
-<?php namespace App\Console\Commands;
+<?php namespace BotStats\Console\Commands;
 
-use App\Bot;
-use App\Stats;
+use BotStats\Bot;
+use BotStats\Stats;
 
 use Carbon\Carbon;
 use GuzzleHttp\Pool;

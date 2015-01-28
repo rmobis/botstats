@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace BotStats;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,7 +16,7 @@ class Bot extends Model {
 	 * @return Illuminate\Database\Eloquent\Collection
 	 */
 	public function stats() {
-		return $this->hasMany('App\Stats');
+		return $this->hasMany('BotStats\Stats');
 	}
 
 }

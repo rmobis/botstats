@@ -1,18 +1,18 @@
-<?php namespace App\Parsers;
+<?php namespace BotStats\Parsers;
 
-use App\Stats;
-use App\Contracts\Parser;
+use BotStats\Stats;
+use BotStats\Contracts\Parser;
 
 use Symfony\Component\DomCrawler\Crawler;
 
 class vBulletinParser implements Parser {
 
 	/**
-	 * Parses the input and returns an App\Stats object with the parsed data.
+	 * Parses the input and returns an BotStats\Stats object with the parsed data.
 	 * 
 	 * @param  string
 	 * 
-	 * @return App\Stats
+	 * @return BotStats\Stats
 	 */
 	public function parse($input)
 	{

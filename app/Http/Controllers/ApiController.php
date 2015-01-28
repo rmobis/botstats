@@ -1,9 +1,9 @@
-<?php namespace App\Http\Controllers;
+<?php namespace BotStats\Http\Controllers;
 
 
-use App\Bot;
-use App\Stats;
-use App\Http\Controllers\Controller;
+use BotStats\Bot;
+use BotStats\Stats;
+use BotStats\Http\Controllers\Controller;
 
 use Carbon\Carbon;
 
