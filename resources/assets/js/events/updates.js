@@ -1,7 +1,7 @@
 /* global statsData, moment */
 (function() {
 	'use strict';
-	
+
 	statsData.events = statsData.events || {};
 
 	statsData.events.updates = {
@@ -10,6 +10,10 @@
 		},
 
 		data: [
+			{
+				title: '10.76 Update',
+				date: '2015-03-03'
+			},
 			{
 				title: '10.75 Update',
 				date: '2015-02-10'
